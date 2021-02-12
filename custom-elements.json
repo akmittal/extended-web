@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "ew-carousel",
+      "description": "A component with a title and an action counter",
+      "properties": [
+
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name":"children",
+          "description": "Add child elemets to load in carousel"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--ew-carousel-text-color",
+          "description": "Main Text Color",
+          "type": "Color"
+        }
+      ]
+    }
+  ]
+}

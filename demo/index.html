@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit-html';
+      import '../dist/components/EwCarousel.js';
+
+      const items = Array.from({ length: 15 }).map((item, index) => index + 1);
+      console.log(items);
+
+      render(
+        html`
+          <style>
+            .child {
+              width: 200px;
+              height: 200px;
+              background: lightgrey;
+              margin: 10px;
+            }
+          </style>
+          <ew-carousel>
+            ${items.map(
+              item => html`<div slot="children" class="child"></div>`
+            )}
+          </ew-carousel>
+        `,
+        document.querySelector('#demo')
+      );
+    </script>
+  </body>
+</html>
